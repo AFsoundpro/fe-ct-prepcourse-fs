@@ -142,7 +142,7 @@ function operadoresLogicos(num1, num2, num3) {
       return "Error"
     }
     else if(num1 > 0 && num1 > num2 && num1 > num3) {
-      return "Número 1 es mayor y positivo"
+      return "Numero 1 es mayor y positivo"
     }
     else if(num3 > num1 && num3 > num2) {
       return num3 + 1
@@ -196,7 +196,14 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   
+   var a = num;
+   var i = 0;
+   do {
+      i = i + 1;
+      a = a + 5;
+   }
+   while (i < 8);
+   return a;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
