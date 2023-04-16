@@ -14,7 +14,7 @@ function crearUsuario() {
       this.usuario = usuario;
       this.nombre = nombre;
       this.email = email;
-      this.password = password;
+      this.password =    password;
     }
   
     Usuario.prototype.saludar = function() {
