@@ -29,6 +29,16 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+   /*let newString =[];
+   for(let k = 0; k < string.lenght; k++) {
+      if(string[k].toUpperCase() !== string[k])
+      newString.push(string[k])
+   }
+   for(let i = string.lenght - 1; i >= 0; i--) {
+      if(string[i] === string[i].toUpperCase())
+      newString.unshift(string[i])
+   }
+   return newString.join('')*/
 }
 
 function asAmirror(frase) {
@@ -36,18 +46,41 @@ function asAmirror(frase) {
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
+   let arrayFrase = frase.split(" ")
+   let arrayPalabras = arrayFrase.map(e => e.split("").reverse().join(""))
+   let result  = arrayPalabras.join(" ")
+   return result;
 }
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+
+   var num = numero.toString();
+   if(num === num.split('').reverse().join('')) {
+      return 'Es capicua'
+   } else return 'No es capicua';
 }
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   let arr = string.split('');
+   let contador = 0;
+
+   for(var i = 0; i < arr.lenght; i++) {
+      if(arr[i] === 'a' || arr[i] === 'b'|| arr[i] === 'c') {
+         return delete arr[i]
+         contador++
+      }
+   }
+   if(contador=== 0) {
+      return arr
+   } else{
+      return arr.join(arr)
+   }
 }
 
 function sortArray(arrayOfStrings) {
