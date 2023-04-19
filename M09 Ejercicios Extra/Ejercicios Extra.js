@@ -29,16 +29,10 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
-   /*let newString =[];
-   for(let k = 0; k < string.lenght; k++) {
-      if(string[k].toUpperCase() !== string[k])
-      newString.push(string[k])
-   }
-   for(let i = string.lenght - 1; i >= 0; i--) {
-      if(string[i] === string[i].toUpperCase())
-      newString.unshift(string[i])
-   }
-   return newString.join('')*/
+   const arr = string.split("");
+  const mayusculas = arr.filter(char => char === char.toUpperCase());
+  const minusculas = arr.filter(char => char === char.toLowerCase());
+  return mayusculas.join("") + minusculas.join("");
 }
 
 function asAmirror(frase) {
@@ -78,6 +72,7 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   return arrayOfStrings.sort((a, b) => a.length - b.length);
 }
 
 function buscoInterseccion(array1, array2) {
@@ -87,6 +82,8 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+
+   return array1.filter(element => array2.includes(element));
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
